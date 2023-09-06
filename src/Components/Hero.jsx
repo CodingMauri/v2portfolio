@@ -1,5 +1,5 @@
 import React from "react";
-
+import {motion} from "framer-motion"
 import Typewriter from "typewriter-effect";
 import sunset from "../assets/images/IMG_9643.jpg"
 

@@ -5,6 +5,10 @@ module.exports = {
     extend: {
       fontFamily:{
         "reality": ["RealityStone", "sans-serif"]
+      },
+
+      gridTemplateColums:{
+        'fluid': 'repeat(auto-fit, minmax(20rem,1fr))'
       }
     },
   },
