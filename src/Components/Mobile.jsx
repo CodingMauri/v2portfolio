@@ -1,14 +1,18 @@
 import React from "react";
-import Hamburger from "hamburger-react";
-export default function Mobile({ scrollToSection,isOpen }) {
+import { motion } from "framer-motion";
+export default function Mobile({ scrollToSection, setOpen }) {
+  console.log(setOpen);
   return (
-    <div className=" absolute w-full bottom-0 h-screen translate-y-[100%] -translate-x-10 left-10 bg-[#242424] flex flex-col gap-4 z-1 p-10 transiton-all duration-500 ">
-      
-
-      <div className="flex flex-col items-center justify-center">
+    <div className=" absolute w-full bottom-0 h-screen translate-y-[100%] bg-[#141414] -translate-x-10 left-10 flex flex-col gap-4 z-1 p-10 transiton-all duration-500 ">
+      <motion.div
+        initial={{ x: -100 }}
+        animate={{ x: 0 }}
+        transition={{ type: "slider", stiffness: 100, duration: 1 }}
+        className="flex flex-col items-center justify-center w-full h-screen"
+      >
         <ul
           className="text-white font-reality text-md font-bold "
-          onClick={() => scrollToSection("About" )}
+          onClick={() => scrollToSection("About")}
         >
           About
         </ul>
@@ -24,7 +28,7 @@ export default function Mobile({ scrollToSection,isOpen }) {
         >
           Contact
         </ul>
-      </div>
+      </motion.div>
     </div>
   );
 }

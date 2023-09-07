@@ -7,9 +7,10 @@ const Contact = () => {
         Lets Chat!
       </h1>
       
-      <div className="w-full h-full grid auto-cols-auto grid-flow-col gap-4">
-      <div className = "w-full aspect-square flex items-center justify-center">
+      <div className="w-full  min-w-[75%] h-full lg:grid auto-cols-auto grid-flow-col gap-4 sm:flex-col p-10 ">
+      <div className = "w-full h-full aspect-square flex items-center justify-center">
           <iframe
+          title = "Located"
           className = "w-[75%] aspect-square border-8 border-white rounded-xl p-2 "
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101130.15699105864!2d-122.15171246075876!3d37.61822097898874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9431b601597d%3A0x70474dec26939c0!2sHayward%2C%20CA!5e0!3m2!1sen!2sus!4v1693987304239!5m2!1sen!2sus"
             allowFullScreen=""

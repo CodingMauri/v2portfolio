@@ -62,7 +62,7 @@ export default function Navbar({ scrollToSection, mobileView }) {
             </ul>
           </>
         )}
-        {mobileView && isOpen && <Mobile isOpen = {isOpen} scrollToSection = {scrollToSection} />}
+        {mobileView && isOpen && <Mobile setOpen = {setOpen} scrollToSection = {scrollToSection} />}
       </div>
     </div>
   );

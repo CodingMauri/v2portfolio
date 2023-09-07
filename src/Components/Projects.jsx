@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useState ,useRef} from "react";
+import { useRef} from "react";
 import ProjectCard from "./ProjectCard";
 
 import {
@@ -28,14 +28,14 @@ const Projects = ({mobileView}) => {
 
   
 
-  // useEffect(() => {
-  //   const slickCarousel = slickCarouselRef.current;
-  //   const slickTrack = slickCarousel.innerSlider.list;
+  useEffect(() => {
 
-  //   if(slickTrack){
-  //     slickTrack.style.margin = "1rem"
-  //   }
-  // },[])
+    if(slickCarouselRef.current){
+      const innerSlider = slickCarouselRef.current.innerSlider;
+
+      innerSlider.list.style.margin = "1rem";
+    }
+  },[])
 
   const works = [
     {
@@ -72,7 +72,7 @@ const Projects = ({mobileView}) => {
       {mobileView ? (
         
           <Slider
-          // ref = {slickCarouselRef}
+          ref = {slickCarouselRef}
             className="flex justify-center items-center w-full h-screen translate-y-1/2 overflow-visible"
             {...settings}
           >
